@@ -9,6 +9,7 @@
 
 #include "DataDefine.h"
 #include "ChainIDE.h"
+#include "IDEUtil.h"
 #include "popwidget/commondialog.h"
 
 #include "datarequire/DataRequireManager.h"

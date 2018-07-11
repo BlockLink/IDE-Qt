@@ -58,7 +58,8 @@ SOURCES += main.cpp\
     compile/kotlinCompile.cpp \
     popwidget/ConfigWidget.cpp \
     contentwidget/Editor.cpp \
-    contentwidget/codeeditor.cpp
+    contentwidget/codeeditor.cpp \
+    popwidget/importdialog.cpp
 
 HEADERS  += MainWindow.h \
     ChainIDE.h \
@@ -105,7 +106,8 @@ HEADERS  += MainWindow.h \
     compile/kotlinCompile.h \
     popwidget/ConfigWidget.h \
     contentwidget/Editor.h \
-    contentwidget/codeeditor.h
+    contentwidget/codeeditor.h \
+    popwidget/importdialog.h
 
 FORMS    += MainWindow.ui \
     popwidget/commondialog.ui \
@@ -127,7 +129,8 @@ FORMS    += MainWindow.ui \
     contractwidget/FunctionWidget.ui \
     popwidget/ConfigWidget.ui \
     contentwidget/Editor.ui \
-    contentwidget/codeeditor.ui
+    contentwidget/codeeditor.ui \
+    popwidget/importdialog.ui
 
 RESOURCES += \
     chain.qrc

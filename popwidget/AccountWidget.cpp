@@ -6,6 +6,7 @@
 #include "ChainIDE.h"
 #include "DataManager.h"
 #include "namedialog.h"
+#include "importdialog.h"
 #include "IDEUtil.h"
 
 class AccountWidget::DataPrivate
@@ -52,6 +53,12 @@ void AccountWidget::on_newAccount_clicked()
     {
         ChainIDE::getInstance()->postRPC("createnewaccount",IDEUtil::toJsonFormat("getnewaddress",QJsonArray()<<name));
     }
+}
+
+void AccountWidget::on_importKey_clicked()
+{
+    ImportDialog dia;
+    dia.exec();
 }
 
 void AccountWidget::on_closeBtn_clicked()

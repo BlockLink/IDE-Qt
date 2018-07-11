@@ -114,7 +114,6 @@ void MainWindow::startWidget()
     ui->transferAction->setVisible(false);
     ui->importAction->setVisible(false);
     ui->exportAction->setVisible(false);
-    ui->DeleteAllBreakpointAction->setVisible(false);
 
     //设置界面比例
     ui->splitter_hori->setSizes(QList<int>()<<0.1*ui->centralWidget->width()<<0.9*ui->centralWidget->width());
@@ -392,7 +391,8 @@ void MainWindow::on_TabBreaPointAction_triggered()
 }
 
 void MainWindow::on_DeleteAllBreakpointAction_triggered()
-{//
+{//清空断点
+    ui->contentWidget->ClearBreakPoint();
 
 }
 
