@@ -32,7 +32,6 @@ private slots:
 private:
     Ui::NameDialog *ui;
     bool yesOrNO;
-    QMovie* gif;
 };
 
 #endif // NAMEDIALOG_H

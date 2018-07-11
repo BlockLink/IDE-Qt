@@ -89,6 +89,11 @@ void LinkBackStage::ReadyClose()
 {
     disconnect(_p->clientProc,&QProcess::stateChanged,this,&LinkBackStage::onClientExeStateChanged);
     disconnect(_p->nodeProc,&QProcess::stateChanged,this,&LinkBackStage::onNodeExeStateChanged);
+    //先lock
+    rpcPostedSlot("id-lock-onCloseIDE",IDEUtil::toJsonFormat( "lock", QJsonArray()));
+    rpcPostedSlot( "id-witness_node_stop",IDEUtil::toJsonFormat( "witness_node_stop", QJsonArray()));
+
+    IDEUtil::msecSleep(5000);
     _p->clientProc->close();
     _p->nodeProc->close();
 }

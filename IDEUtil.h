@@ -25,6 +25,7 @@ public:
     //新建目录，如果存在，后面加1
     static QString createDir(const QString &dirpath);
 
+    static void msecSleep(int msec);
 private:
     IDEUtil();
 };

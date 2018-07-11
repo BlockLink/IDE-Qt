@@ -5,6 +5,7 @@
 #include <QFileInfo>
 #include <QDir>
 #include <QDebug>
+#include <QTime>
 
 QString IDEUtil::toJsonFormat(QString instruction, const QJsonArray & parameters)
 {
@@ -192,6 +193,14 @@ QString IDEUtil::createDir(const QString &dirpath)
     return path;
 }
 
+void IDEUtil::msecSleep(int msec)
+{
+    QTime n=QTime::currentTime();
+    QTime now;
+    do{
+         now=QTime::currentTime();
+       }while (n.msecsTo(now)<=msec);
+}
 IDEUtil::IDEUtil()
 {
 

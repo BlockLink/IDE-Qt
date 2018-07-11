@@ -30,13 +30,6 @@ NameDialog::NameDialog(QWidget *parent) :
     ui->nameLineEdit->setValidator( validator );
 
     ui->nameLineEdit->setFocus();
-
-    gif = new QMovie(":pic/loading2.gif");
-    gif->setScaledSize( QSize(18,18));
-    ui->gifLabel->setMovie(gif);
-    gif->start();
-    ui->gifLabel->hide();
-
 }
 
 NameDialog::~NameDialog()
@@ -110,8 +103,6 @@ void NameDialog::on_nameLineEdit_textChanged(const QString &arg1)
         return;
 
     }
-
-    ui->gifLabel->hide();
 }
 
 void NameDialog::on_nameLineEdit_returnPressed()

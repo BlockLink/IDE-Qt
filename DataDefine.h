@@ -45,7 +45,8 @@ namespace DataDefine
     static const QString CSHARP_DIR = "contracts/csharp";
     static const QString KOTLIN_DIR = "contracts/kotlin";
 
-    static const QString LOCAL_CONTRACT_PATH = "contracts/contracts.contract";
+    static const QString LOCAL_CONTRACT_TEST_PATH = "contracts/contracts_test.contract";
+    static const QString LOCAL_CONTRACT_FORMAL_PATH = "contracts/contracts_formal.contract";
 
 
     //编译工具路径
@@ -159,7 +160,7 @@ namespace DataDefine
     };
     typedef std::shared_ptr<AccountInfo> AccountInfoPtr;
     typedef std::vector<AccountInfoPtr> AccountInfoVec;
-    //总类
+//总类
     class AccountData
     {
     public:
